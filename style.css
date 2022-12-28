@@ -1,3 +1,39 @@
-li {
+.header {
+  width: 100%;
+  background-color: rgb(153, 0, 255);
+  text-align: center;
+}
+
+.header .container .logo {
+  font-family: 'Rubik Mono One', sans-serif;
+  width: 100px;
+  line-height: 50px;
+  color: #fff700;
+  font-size: 35px;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px rgba(251, 255, 0, 0.445), -2px -2px 3px rgba(255, 174, 0, 0.445);
+  -webkit-text-stroke: 1px #fff700;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 5px;
   display: inline;
+  margin-right: 5%;
+}
+
+#inputTask{
+  background-color: rgb(238, 178, 213);
+  width: 35%;
+  
+}
+
+#buttonAddTask{
+  background-color: rgb(219, 226, 161);
+  border-radius: 5px;
+}
+
+#inputTaskText{
+  text-align: center;
+}
+
+#buttonRemove{
+  text-align: center;
 }
