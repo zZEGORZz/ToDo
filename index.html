@@ -20,14 +20,14 @@
                 <div class="logo">ToDoList</div>
                 <div class="form">
                     <input type="text" v-bind:value="valueInput" v-on:input="handlyInput" v-on:keypress.enter="addTask">
-                    <button class="btn" v-on:click="addTask">Add a new task</button>
+                    <button class="btn" v-on:click="addTask">Добавить задачу</button>
                 </div>
             </div>
         </div>
     
         <div class="container">
             <h2>
-                <span>To Do</span>
+                <span>Нужно выполнить</span>
                 <span class="mask-num">{{ needDoList.length }}</span>
             </h2>
             <ul class="mask-list">
@@ -36,11 +36,11 @@
                         <input type="checkbox" v-on:change="doCheck(index, 'need')">
                         <span>{{ mask.title }}</span>
                     </div>
-                    <button class="btn-remove" v-on:click="removeMask(index, 'need')">Remove</button>
+                    <button class="btn-remove" v-on:click="removeMask(index, 'need')">Удалить</button>
                 </li>
             </ul>
             <h2>
-                <span>Done</span>
+                <span>Готово</span>
                 <span class="mask-num">{{ completeList.length }}</span>
             </h2>
             <ul class="mask-list complete-list">
@@ -49,7 +49,7 @@
                         <input type="checkbox" checked v-on:change="doCheck(index, 'complete')">
                         <span>{{ mask.title }}</span>
                     </div>
-                    <button class="btn-remove" v-on:click="removeMask(index, 'complete')">Remove</button>
+                    <button class="btn-remove" v-on:click="removeMask(index, 'complete')">Удалить</button>
                 </li>
             </ul>
         </div>

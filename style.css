@@ -84,6 +84,7 @@ body {
     padding: 10px 15px;
     font-size: 12px;
     height: 40px;
+    width: 149px;
     outline: none;
     transition: 0.2s;
   }
@@ -128,10 +129,11 @@ body {
       font-size: 12px;
       outline: none;
       transition: 0.2s;
+      border-radius: 5px;
   }
   
   .btn-remove:hover {
-    background-color: #535151;
+    background-color: #b11010;
     border-color: #535151;
   }
   
