@@ -1,3 +1,4 @@
+'use strict'
 Vue.createApp({
     data(){
         return {
