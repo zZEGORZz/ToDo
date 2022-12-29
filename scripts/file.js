@@ -1,16 +1,20 @@
 "use strict";
 
-let id = 0;
 
 function getToDoList(inp){
     let ul = document.querySelector('.ulTodo');
 
     let li = document.createElement('li');
     li.classList.add('liTodo');
-    li.id = id;
-    id++;
+    let but = document.createElement('button');
+    but.classList.add('liTodo', 'butt');
     li.innerHTML = inp;
-    ul.append(li);
+    but.innerText = 'Удалить';
+    but.onclick = () => {
+        li.remove();
+        but.remove();
+    }
+    ul.append(li, but);
     return li;
 }
     
@@ -23,6 +27,10 @@ buttonAddTask.onclick = function(){
     
 }
 
-var parent = document.getElementById("ulList");
-var child = document.getElementById("delete");
-parent.removeChild(child);
+function deleteById(parentId, childId){
+    var parent = document.getElementById(parentId);
+    var child = document.getElementById(childId);
+    parent.removeChild(child);
+}
+
+deleteById('ulList', 'delete');

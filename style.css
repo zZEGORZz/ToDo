@@ -1,3 +1,7 @@
+li{
+  border-top: 1px solid rgb(255, 0, 170);
+}
+
 .header {
   width: 100%;
   background-color: rgb(153, 0, 255);
@@ -47,4 +51,16 @@
   list-style-type: none;
   font-size: 30px;
   word-break:break-all;
+}
+
+.liTodo.butt{
+  background-color: rgba(255, 0, 0, 0.384);
+  font-size: 17px;
+  height: 35px;
+  border-radius: 20px;
+  margin-left: 80%;
+}
+
+.liTodo.butt:hover{
+  background-color: rgba(255, 0, 0, 0.815);
 }
