@@ -16,10 +16,13 @@ function getToDoList(inp){
     
 buttonAddTask.onclick = function(){
     let inp = document.getElementById('inputTask').value;
-    console.log(inp);
+    if(inp === '')return 1;
     getToDoList(inp);
     document.getElementById('inputTaskText').innerHTML = 'Последняя задача: ' + inp;
     document.getElementById('inputTask').value = '';
+    
 }
 
-
+var parent = document.getElementById("ulList");
+var child = document.getElementById("delete");
+parent.removeChild(child);
