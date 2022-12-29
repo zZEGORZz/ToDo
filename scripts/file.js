@@ -1,9 +1,9 @@
 "use strict";
 
-
+// создание тасков, и, по совместительству, удаление,
+// которое хотелось бы вынести отдельно (или нет)
 function getToDoList(inp){
     let ul = document.querySelector('.ulTodo');
-
     let li = document.createElement('li');
     li.classList.add('liTodo');
     let but = document.createElement('button');
@@ -30,13 +30,4 @@ buttonAddTask.onclick = function(){
     getToDoList(inp);
     document.getElementById('inputTaskText').innerHTML = 'Последняя задача: ' + inp;
     document.getElementById('inputTask').value = '';
-    
 }
-
-function deleteById(parentId, childId){
-    var parent = document.getElementById(parentId);
-    var child = document.getElementById(childId);
-    parent.removeChild(child);
-}
-
-deleteById('ulList', 'delete');
