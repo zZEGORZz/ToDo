@@ -1,31 +1,25 @@
 "use strict";
 
+let id = 0;
 
-let tasks = [
-    { task: 'go work' },
-    { task: 'go LearnJS' },
-    { task: 'go Learn' },
-    { task: 'go to work' }
-];
+function getToDoList(inp){
+    let ul = document.querySelector('.ulTodo');
 
+    let li = document.createElement('li');
+    li.classList.add('liTodo');
+    li.id = id;
+    id++;
+    li.innerHTML = inp;
+    ul.append(li);
+    return li;
+}
+    
 buttonAddTask.onclick = function(){
     let inp = document.getElementById('inputTask').value;
-    //getToDoList(inp);
-    document.getElementById('inputTaskText').innerHTML = inp;
+    console.log(inp);
+    getToDoList(inp);
+    document.getElementById('inputTaskText').innerHTML = 'Последняя задача: ' + inp;
     document.getElementById('inputTask').value = '';
 }
 
-function getToDoList(alltask){
-    let ul = document.querySelector('.ulTodo');
-    
-    let liElements = alltask.map((elem) => {
-        let li = document.createElement('li');
-        li.classList.add('liTodo');
-        li.append(elem.task);
-        return li;
-    })
-    return ul.append(...liElements);
-}
-
-getToDoList(tasks);
 

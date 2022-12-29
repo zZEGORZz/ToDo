@@ -41,3 +41,9 @@
 .showingOff{
   visibility: hidden;
 }
+
+.liTodo{
+  text-align: center;
+  list-style-type: none;
+  font-size: 30px;
+}
