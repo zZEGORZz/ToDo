@@ -37,3 +37,7 @@
 #buttonRemove{
   text-align: center;
 }
+
+.showingOff{
+  visibility: hidden;
+}
