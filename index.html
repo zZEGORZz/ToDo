@@ -14,11 +14,11 @@
     <div class="header">
         <div class="container">
             <div class="logo">Задачи</div>
-            <input id="inputTask" type="text" placeholder="Введите задачу">
+            <input id="inputTask" type="text" placeholder="Введите задачу" onkeydown="checkForEnter(event)">
             <input id="buttonAddTask" type="button" value="Добавить"/>
         </div>
     </div>
-    <h2><div id="inputTaskText"></div></h2> 
+    <h5><div id="inputTaskText"></div></h5> 
 
     <ul class="ulTodo" id="ulList">
         <li id="delete" class="showingOff liTodo">Егорка</li>

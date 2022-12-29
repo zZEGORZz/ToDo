@@ -1,5 +1,8 @@
 li{
-  border-top: 1px solid rgb(255, 0, 170);
+  margin-top: 15px;
+  border-top: 1px solid rgba(153, 0, 255, 0.534);
+  margin-left: 70px;
+  margin-right: 102px;
 }
 
 .header {
@@ -36,6 +39,9 @@ li{
 #inputTaskText{
   text-align: center;
   word-break:break-all;
+  margin-left: 102px;
+  margin-right: 102px;
+  color: rgba(109, 140, 141, 0.781);
 }
 
 #buttonRemove{

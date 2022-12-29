@@ -18,6 +18,12 @@ function getToDoList(inp){
     return li;
 }
     
+function checkForEnter(e){
+    if (e.keyCode == 13) { 
+        document.querySelector("#buttonAddTask").click();
+      }
+}
+
 buttonAddTask.onclick = function(){
     let inp = document.getElementById('inputTask').value;
     if(inp === '')return 1;
