@@ -11,19 +11,32 @@
 
 </head>
 <body>
+<div id="app">
     <div class="header">
         <div class="container">
             <div class="logo">Задачи</div>
-            <input id="inputTask" type="text" placeholder="Введите задачу" onkeydown="checkForEnter(event)">
-            <input id="buttonAddTask" type="button" value="Добавить"/>
+            <input 
+                id="inputTask" 
+                type="text" 
+                placeholder="Введите задачу" 
+                v-bind:value="inputValue" 
+                @input="inpValueNow"
+                @keypress.enter="addTask"
+            >
+            <input id="buttonAddTask" type="button" value="Добавить" @click="addTask">
         </div>
     </div>
-    <h5><div id="inputTaskText"></div></h5> 
-
-    <ul class="ulTodo" id="ulList">
-        <li id="delete" class="showingOff liTodo"></li>
+    <ul>
+        <li v-for="(elem, indexElem) in listTasks"> {{ elem }} 
+            <div>
+                <button class="btn btn2" @click="deleteTask(indexElem)">Удалить</button>
+            </div>
+        </li>
+        
     </ul>
+</div>
 
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="scripts/file.js"></script>
 </body>
 </html>
